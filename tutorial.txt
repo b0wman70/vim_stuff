@@ -1,0 +1,215 @@
+
+          ____            __     _    ___              _______
+         / __ )___  _____/ /_   | |  / (_)___ ___     /_  __(_)___  _____
+        / __  / _ \/ ___/ __/   | | / / / __ `__ \     / / / / __ \/ ___/
+       / /_/ /  __(__  ) /_     | |/ / / / / / / /    / / / / /_/ (__  )
+      /_____/\___/____/\__/     |___/_/_/ /_/ /_/    /_/ /_/ .___/____/
+                                                          /_/
+
+                           Author: Pierpaolo Pupilli
+
+                                 ____ ____ ____
+                                ||c |||o |||m ||
+                                ||__|||__|||__||
+                                |/__\|/__\|/__\|
+
+
+Count
+Operator
+Motion
+
+Operator
+========
+
+d         delete
+y         yank
+c         change
+v         visual select
+
+D         delete until end of line
+C         change until end of line
+
+Motions
+=======
+
+(the text objects are considered motions)
+
+hjkl      left-down-up-rigth
+<CRTL-d>  down a page
+<CRTL-u>  up a page
+
+zz        center page on the cursor
+
+gg        first line
+G         last line ([count]G go to [count] line)
+
+H         top of the page (High)
+M         middle of the page (Middle)
+L         bottom of the page (Low)
+
+
+}         next paraghrap
+{         previous paragraph
+
+%         jump betweeen ( and ), or [ and ], or { and }
+
+0         begin of line
+^         first column of line
+$         end of line
+
+w         forward 1 word
+b         begin of the word (backward 1 word)
+e         end of the word (forward to the end of the word)
+
+f{char} to first left {char}
+F{char} to first rigth {char}
+t{char} before first left {char} (till char)
+T{char} before first rigth {char} (till char)
+
+
+
+Text Objects (https://blog.carbonfive.com/vim-text-objects-the-definitive-guide/)
+---------------------------------------------------------------------------------
+
+Text object are cionsidered as motion
+
+i{x}        inside {x}
+a{x}        all {x}
+
+{x} can be: w (word), p (paragraph), t (tag), (, [, {, <, '. ", etc...
+
+Ex:
+diw delete inside word
+dip delete inside paragraph
+
+
+
+
+
+#####################################
+
+m{char} set mark {char}
+'{char} go to mark {char}
+
+<C-o>   return to previous cursor position
+
+*         search the word under the cursor
+#         idem backward
+
+
+#####################################
+
+u         undo
+CRTL-R    redo
+
+o         insert row after curret row
+O         insert row BEFORE curret row
+
+p         past after the cursor
+P         past before the cursor
+
+#####################################
+
+Macro an registers
+------------------
+
+q{char}   Start new macro {char} recording. To finish q.
+          Marco is saved in the regiser {char}
+
+@{char}   execute macro {char}. Or @@ to execute last macro
+
+:reg      show register contents
+
+To change a macro:
+
+"{char}p  past {char} register content
+edit the macro
+"{char}yy yank changed macro into register {char}
+dd        delete changed text
+
+#####################################
+
+MISC
+----
+
+:<C-f>        show command history
+
+:sp [file]    splitta la finestra e nella seconda apre [file]
+              Se non si specifica [file] apre lo stesso file nella seconda window.
+              Se si vuole salvare il file con un nuovo nome usare:
+              :sav [newfile]
+              e la nuova window conterrà il nuovo file!
+
+<C-w> [hjkl]  per muoversi tra finestre
+
+:tabedit [file] apre [file]in una nuova tab
+
+gt            per muoversi tra le tab
+
+
+
+Per usare un comando in modalità inserimento:
+
+<C-o><command>
+
+#####################################
+
+IdeaVIM
+-------
+
+Per comodità:
+File->Settings->Editor->VIM Emulation e far gestire CRTL-C a IDE
+
+gd        goto definition (to go back <C-t>)
+
+"+y       copia il testo selezionato nel registro + che è disponibile dalla cliplboard!
+
+#####################################
+
+Command mode
+------------
+
+:<range><command>    il <range> si può selezionare anche in visual mode! (prima si seleziona poi si preme :)
+
+
+
+
+
+
+
+
+
+#####################################
+
+Plugin management
+
+Installare vim-plug (https://github.com/junegunn/vim-plug)
+
+apt-get install fzf ripgrep
+
+Su .vimrc:
+
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+" Initialize plugin system
+call plug#end()
+
+
+
+Lanciare :PlugInstall
+
+Mappare <C-f> su :Files insernedo su .vimrc:
+nnoremap <silent> <C-f> :Files<CR>
+
+
+######################################
+
+Per usare la bash in modalità vi:
+set -o vi
+
