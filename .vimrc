@@ -41,16 +41,23 @@ endif
 " The first time, to install plugins, launch :PlugInstall
 call plug#begin('~/.vim/plugged')
 
+Plug 'mhinz/vim-startify'
+
 Plug 'morhetz/gruvbox'
 " Plug 'https://github.com/ycm-core/YouCompleteMe.git'
 
 " fzf plugin (it must be installed fzf)
-"Plug 'junegunn/fzf.vim'
-"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+Plug 'slarwise/vim-tmux-send'
 
 call plug#end()
 
-" nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <C-f> :Files<CR>
 
 colorscheme gruvbox
 set background=dark
+
+nnoremap Q :SendLine<CR>
+
