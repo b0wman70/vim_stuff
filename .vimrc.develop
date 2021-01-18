@@ -1,10 +1,14 @@
 " basics
 set nocompatible              " be iMproved
-syntax on
 set tabstop=2                 " set tab=2 spaces
 set expandtab                 " convert tab to spaces
 set number relativenumber
 set noswapfile
+
+" syntax
+syntax on
+filetype on
+autocmd BufNewFile,BufRead *.jspf set filetype=jsp
 
 set incsearch
 
@@ -15,10 +19,6 @@ set autoindent
 set smartindent
 set shiftwidth=2
 
-" syntax
-syntax on
-filetype on
-autocmd BufNewFile,BufRead *.jspf set filetype=jsp
 
 " wildmenu
 set wildmenu
