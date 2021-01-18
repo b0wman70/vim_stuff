@@ -60,6 +60,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'slarwise/vim-tmux-send'
 
+Plug 'https://tpope.io/vim/commentary.git'
+
 call plug#end()
 
 nnoremap <silent> <C-f> :Files<CR>
