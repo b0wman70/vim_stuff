@@ -50,7 +50,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'mhinz/vim-startify'
-
 "Plug 'https://github.com/ycm-core/YouCompleteMe.git'
 
 " fzf plugin (it must be installed fzf)
@@ -58,16 +57,22 @@ Plug 'mhinz/vim-startify'
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
-
 Plug 'slarwise/vim-tmux-send'
-
 Plug 'https://tpope.io/vim/surround.git'
-
 Plug 'https://tpope.io/vim/commentary.git'
+Plug 'alvan/vim-closetag'
 
 call plug#end()
 
+" fzf
 "nnoremap <silent> <C-f> :Files<CR>
+
+" vim-tmux-send
 nnoremap Q :SendLine<CR>
+
+" vim-closetag
+" filenames like *.xml, *.html, *.xhtml, ...
+" These are the file extensions where this plugin is enabled.
+let g:closetag_filenames = '*.html,*.jsp,*.jspf'
 
 set background=dark
