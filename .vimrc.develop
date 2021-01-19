@@ -1,19 +1,32 @@
 " basics
 set nocompatible              " be iMproved
-syntax on
 set tabstop=2                 " set tab=2 spaces
 set expandtab                 " convert tab to spaces
 set number relativenumber
 set noswapfile
+set mouse=
+
+" syntax
+syntax on
+filetype on
+autocmd BufNewFile,BufRead *.jspf set filetype=jsp "consider jspf as jsp
+set showmatch
+" Set showmatch color
+" N.B. This setting must be put in .vim/after/ftplugin/vim.vim because
+" the default ftplugin is loaded *after* .vimrc and the settings will be overwritten
+" hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
+if empty(glob('~/.vim/after/ftplugin/vim.vim'))
+  silent !install -d ~/.vim/after/ftplugin ; echo "hi MatchParen cterm=bold ctermbg=none ctermfg=yellow" > ~/.vim/after/ftplugin/vim.vim
+endif
+
+set autoindent
+set smartindent
+set shiftwidth=2
 
 set incsearch
 
 " when yank a visual block put the cursor at the and of visual block
 :vnoremap y y'>
-
-set autoindent
-set smartindent
-set shiftwidth=2
 
 " add closing brakets
 inoremap {      {}<Left>
