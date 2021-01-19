@@ -66,7 +66,10 @@ F{char} to first rigth {char}
 t{char} before first left {char} (till char)
 T{char} before first rigth {char} (till char)
 
-
+To change, delete or insert on multiple rows in visual block mode:
+I         insert
+A         append
+c         change
 
 Text Objects (https://blog.carbonfive.com/vim-text-objects-the-definitive-guide/)
 ---------------------------------------------------------------------------------
