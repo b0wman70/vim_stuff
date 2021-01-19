@@ -160,15 +160,16 @@ Per usare un comando in modalità inserimento:
 IdeaVIM
 -------
 
+Usare .ideavimrc
+
 Per comodità:
-File->Settings->Editor->VIM Emulation e far gestire CRTL-C e CRTL-E a IDE
+File->Settings->Editor->VIM Emulation e far CRTL-E a IDE (recent files)
 
 gd        goto definition (to go back <C-o>)
 
-"+y       copia il testo selezionato nel registro + che è disponibile dalla cliplboard!
-
 CTRL-SHIFT-n  fuzzy find files
 CRTL-e        show recent files
+ALT-[->|<-]   navigate tabs
 
 #####################################
 
