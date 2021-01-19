@@ -161,11 +161,14 @@ IdeaVIM
 -------
 
 Per comodità:
-File->Settings->Editor->VIM Emulation e far gestire CRTL-C a IDE
+File->Settings->Editor->VIM Emulation e far gestire CRTL-C e CRTL-E a IDE
 
 gd        goto definition (to go back <C-o>)
 
 "+y       copia il testo selezionato nel registro + che è disponibile dalla cliplboard!
+
+CTRL-SHIFT-n  fuzzy find files
+CRTL-e        show recent files
 
 #####################################
 
