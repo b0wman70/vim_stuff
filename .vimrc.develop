@@ -29,6 +29,9 @@ inoremap {<CR>  {<CR>}<Esc>O
 inoremap (      ()<Left>
 inoremap (<CR>  (<CR>)<Esc>O
 
+" to autocomplete
+inoremap <C-Space> <C-x><C-o>
+
 " easy splitted windows navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -74,5 +77,6 @@ nnoremap Q :SendLine<CR>
 " filenames like *.xml, *.html, *.xhtml, ...
 " These are the file extensions where this plugin is enabled.
 let g:closetag_filenames = '*.html,*.jsp,*.jspf'
+
 
 set background=dark
