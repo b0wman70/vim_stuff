@@ -16,3 +16,10 @@ map <C-o> <Action>(Back)
 map <C-i> <Action>(Forward)
 map g; <Action>(JumpToLastChange)
 map g, <Action>(JumpToNextChange)
+
+" Generate QueryDsl table definition from QTableName
+" let seems DON'T WORK in ideavim!!!!!!!!!!
+" Must be done with map (it isn't really a macro...)
+"let @q='^yiwA ^[pbx~^y$A = ^[pa;^[F r.^'
+nnoremap @q ^yiwA <ESC>pbx~^y$A = <ESC>pa;<ESC>F r.^
+

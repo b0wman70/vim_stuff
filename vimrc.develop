@@ -10,9 +10,11 @@ set wildmenu
 
 " syntax
 syntax on
-filetype on
-autocmd BufNewFile,BufRead *.jspf set filetype=jsp "consider jspf as jsp
+filetype plugin on
 set showmatch
+" use % to match tag too
+runtime macros/matchit.vim
+autocmd BufNewFile,BufRead *.jspf set filetype=jsp "consider jspf as jsp
 
 set autoindent
 set smartindent
@@ -64,6 +66,7 @@ Plug 'slarwise/vim-tmux-send'
 Plug 'https://tpope.io/vim/surround.git'
 Plug 'https://tpope.io/vim/commentary.git'
 Plug 'alvan/vim-closetag'
+Plug 'https://github.com/gregsexton/MatchTag.git'
 
 call plug#end()
 
@@ -77,6 +80,5 @@ nnoremap Q :SendLine<CR>
 " filenames like *.xml, *.html, *.xhtml, ...
 " These are the file extensions where this plugin is enabled.
 let g:closetag_filenames = '*.html,*.jsp,*.jspf'
-
 
 set background=dark
