@@ -10,7 +10,8 @@ set wildmenu
 
 " syntax
 syntax on
-filetype on
+filetype plugin on
+runtime macros/matchit.vim
 autocmd BufNewFile,BufRead *.jspf set filetype=jsp "consider jspf as jsp
 set showmatch
 
@@ -64,6 +65,7 @@ Plug 'slarwise/vim-tmux-send'
 Plug 'https://tpope.io/vim/surround.git'
 Plug 'https://tpope.io/vim/commentary.git'
 Plug 'alvan/vim-closetag'
+Plug 'https://github.com/gregsexton/MatchTag.git'
 
 call plug#end()
 
