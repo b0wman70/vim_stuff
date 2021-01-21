@@ -165,7 +165,7 @@ Usare .ideavimrc
 Per comodità:
 File->Settings->Editor->VIM Emulation e far CRTL-E a IDE (recent files)
 
-gd        goto definition (to go back <C-o>)
+gd        goto definition (back <C-o> and forward <C-i>)
 
 CTRL-SHIFT-n  fuzzy find files
 CRTL-e        show recent files
