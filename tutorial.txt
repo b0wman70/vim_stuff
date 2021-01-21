@@ -33,12 +33,9 @@ Motions
 =======
 
 (the text objects are considered motions)
+(also the / search are considered motions!!)
 
 hjkl      left-down-up-rigth
-<CRTL-d>  down a page
-<CRTL-u>  up a page
-
-zz        center page on the cursor
 
 gg        first line
 G         last line ([count]G go to [count] line)
@@ -51,7 +48,6 @@ L         bottom of the page (Low)
 }         next paraghrap
 {         previous paragraph
 
-%         jump betweeen ( and ), or [ and ], or { and }
 
 0         begin of line
 ^         first column of line
@@ -74,7 +70,7 @@ c         change
 Text Objects (https://blog.carbonfive.com/vim-text-objects-the-definitive-guide/)
 ---------------------------------------------------------------------------------
 
-Text object are cionsidered as motion
+Text object are considered as motion
 
 i{x}        inside {x}
 a{x}        all {x}
@@ -134,6 +130,11 @@ dd        delete changed text
 
 MISC
 ----
+
+%         jump betweeen ( and ), or [ and ], or { and }
+zz        center page on the cursor
+<CRTL-d>  down a page
+<CRTL-u>  up a page
 
 :<C-f>        show command history
 
