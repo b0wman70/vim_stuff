@@ -1,0 +1,82 @@
+" basics
+set nocompatible              " be iMproved
+set tabstop=2                 " set tab=2 spaces
+set expandtab                 " convert tab to spaces
+set number relativenumber
+set noswapfile
+set mouse=
+language en_US
+set wildmenu
+
+" syntax
+syntax on
+filetype on
+autocmd BufNewFile,BufRead *.jspf set filetype=jsp "consider jspf as jsp
+set showmatch
+
+set autoindent
+set smartindent
+set shiftwidth=2
+
+set incsearch
+
+" when yank a visual block put the cursor at the and of visual block
+vnoremap y y'>
+
+" add closing brakets
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap (      ()<Left>
+inoremap (<CR>  (<CR>)<Esc>O
+
+" to autocomplete
+inoremap <C-Space> <C-x><C-o>
+
+" easy splitted windows navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" open new split panes to right and bottom
+set splitbelow
+set splitright
+
+" if not installed install vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -kfLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" The first time, to install plugins, launch :PlugInstall
+call plug#begin('~/.vim/plugged')
+
+Plug 'mhinz/vim-startify'
+"Plug 'https://github.com/ycm-core/YouCompleteMe.git'
+
+" fzf plugin (it must be installed fzf)
+"Plug 'junegunn/fzf.vim'
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
+Plug 'slarwise/vim-tmux-send'
+Plug 'https://tpope.io/vim/surround.git'
+Plug 'https://tpope.io/vim/commentary.git'
+Plug 'alvan/vim-closetag'
+
+call plug#end()
+
+" fzf
+"nnoremap <silent> <C-f> :Files<CR>
+
+" vim-tmux-send
+nnoremap Q :SendLine<CR>
+
+" vim-closetag
+" filenames like *.xml, *.html, *.xhtml, ...
+" These are the file extensions where this plugin is enabled.
+let g:closetag_filenames = '*.html,*.jsp,*.jspf'
+
+
+set background=dark
