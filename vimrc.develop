@@ -75,9 +75,4 @@ call plug#end()
 " vim-tmux-send
 nnoremap Q :SendLine<CR>
 
-" vim-closetag
-" filenames like *.xml, *.html, *.xhtml, ...
-" These are the file extensions where this plugin is enabled.
-let g:closetag_filenames = '*.html,*.jsp,*.jspf'
-
 set background=dark
