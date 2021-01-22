@@ -84,11 +84,6 @@ set laststatus=2   " always display statusbar
 " vim-tmux-send
 nnoremap Q :SendLine<CR>
 
-
-if empty(glob('~/.vim/colors/atom-dark.vim'))
-  silent !git clone https://github.com/gosukiwi/vim-atom-dark.git
-endif
-
 " to use this colorsxcheme you have first to install it (https://github.com/gosukiwi/vim-atom-dark) 
 colorscheme atom-dark-256
 
