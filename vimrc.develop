@@ -74,7 +74,8 @@ Plug 'https://github.com/itchyny/lightline.vim'
 call plug#end()
 
 " For coloured lightline: "export TERM=xterm-256color"
-set noshowmode " the bottom bar is now unecessary
+set noshowmode     " the bottom bar is now unecessary
+set laststatus=2   " always display statusbar
 
 " fzf
 "nnoremap <silent> <C-f> :Files<CR>
