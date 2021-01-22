@@ -85,6 +85,11 @@ set laststatus=2   " always display statusbar
 nnoremap Q :SendLine<CR>
 
 " to use this colorsxcheme you have first to install it (https://github.com/gosukiwi/vim-atom-dark) 
+if empty(glob('~/.vim/colors/atom-dark.vim'))
+  silent !curl -kfLo /tmp/master.zip https://github.com/gosukiwi/vim-atom-dark/archive/master.zip
+  silent !unzip /tmp/master.zip
+  silent !cp vim-atom-dark-master/colors/* ~/.vim/colors/
+endif
 colorscheme atom-dark-256
 
 set background=dark
