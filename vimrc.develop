@@ -66,8 +66,12 @@ Plug 'slarwise/vim-tmux-send'
 Plug 'https://tpope.io/vim/surround.git'
 Plug 'https://tpope.io/vim/commentary.git'
 Plug 'https://github.com/gregsexton/MatchTag.git'
+Plug 'https://github.com/itchyny/lightline.vim'
 
 call plug#end()
+
+" For coloured lightline: "export TERM=xterm-256color"
+set noshowmode " the bottom bar is now unecessary
 
 " fzf
 "nnoremap <silent> <C-f> :Files<CR>
