@@ -70,7 +70,8 @@ Plug 'https://tpope.io/vim/surround.git'
 Plug 'https://tpope.io/vim/commentary.git'
 Plug 'https://github.com/gregsexton/MatchTag.git'
 Plug 'https://github.com/itchyny/lightline.vim'
-Plug 'https://github.com/gosukiwi/vim-atom-dark.git'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'uiiaoo/java-syntax.vim' 
 
 call plug#end()
 
@@ -85,11 +86,15 @@ set laststatus=2   " always display statusbar
 nnoremap Q :SendLine<CR>
 
 " to use this colorsxcheme you have first to install it (https://github.com/gosukiwi/vim-atom-dark) 
-if empty(glob('~/.vim/colors/atom-dark.vim'))
-  silent !curl -kfLo /tmp/master.zip https://github.com/gosukiwi/vim-atom-dark/archive/master.zip
-  silent !unzip /tmp/master.zip
-  silent !cp vim-atom-dark-master/colors/* ~/.vim/colors/
-endif
-colorscheme atom-dark-256
+" if empty(glob('~/.vim/colors/atom-dark.vim'))
+"   silent !curl -kfLo /tmp/master.zip https://github.com/gosukiwi/vim-atom-dark/archive/master.zip
+"   silent !unzip /tmp/master.zip
+"   silent !cp vim-atom-dark-master/colors/* ~/.vim/colors/
+" endif
+"colorscheme atom-dark-256
 
+" dracula colorscheme
+let g:dracula_colorterm = 0
 set background=dark
+colorscheme dracula
+"colorscheme PaperColor
