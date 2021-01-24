@@ -8,7 +8,9 @@ set mouse=
 language en_US.UTF-8
 set wildmenu
 set nowrap
+" Copy to system clipboard as well
 set clipboard+=unnamed
+
 
 " syntax
 syntax on

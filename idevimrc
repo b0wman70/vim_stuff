@@ -6,9 +6,6 @@ set surround
 " Emulate commentary.vim (gc to comment/uncomment)
 set commentary
 
-" Copy to system clipboard as well
-set clipboard+=unnamed
-
 " The default C-o and C-i behaviours have certain inconsistencies with
 " Vim which I can't quite pinpoint.
 " I'm using the default IntelliJ behaviours instead.
