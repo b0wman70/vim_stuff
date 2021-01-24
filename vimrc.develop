@@ -1,7 +1,5 @@
 " basics
 set nocompatible              " be iMproved
-set tabstop=2                 " set tab=2 spaces
-set expandtab                 " convert tab to spaces
 set number relativenumber
 set noswapfile
 set mouse=
@@ -20,9 +18,14 @@ set showmatch
 runtime macros/matchit.vim
 autocmd BufNewFile,BufRead *.jspf set filetype=jsp "consider jspf as jsp
 
+" most conservative indent settings to work with other people...
+set tabstop=2                 " set showed tab width=2 spaces
+set shiftwidth=2
+"set noexpandtab
+set copyindent
+set preserveindent
 set autoindent
 set smartindent
-set shiftwidth=2
 
 set incsearch
 
@@ -30,10 +33,10 @@ set incsearch
 vnoremap y y'>
 
 " add closing brakets
-inoremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>O
-inoremap (      ()<Left>
-inoremap (<CR>  (<CR>)<Esc>O
+"inoremap {      {}<Left>
+"inoremap {<CR>  {<CR>}<Esc>O
+"inoremap (      ()<Left>
+"inoremap (<CR>  (<CR>)<Esc>O
 
 " to autocomplete
 inoremap <C-Space> <C-x><C-o>
@@ -74,6 +77,7 @@ Plug 'https://tpope.io/vim/surround.git'
 Plug 'https://tpope.io/vim/commentary.git'
 Plug 'https://github.com/gregsexton/MatchTag.git'
 Plug 'https://github.com/itchyny/lightline.vim'
+"Plug 'vim-airline/vim-airline'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'uiiaoo/java-syntax.vim' 
 Plug 'https://github.com/tpope/vim-fugitive.git'
