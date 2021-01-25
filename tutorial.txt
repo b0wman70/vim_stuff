@@ -233,7 +233,7 @@ In the :G view go to the conflict file row and
 dv                  (or :Givdiffsplit) open a 3 windows view with on the left the current branch version,
                     on the center the working tree file to edit and on the rigth the merge branch version.
 
-                    You can edit manually the center file or go on the >>>>>HEAD row and
+                    You can edit manually the center file or go on the <<<<<<< HEAD row and
                     :diffget //2    to get the change from left
                     :diffget //3    to get the change from rigth
 
