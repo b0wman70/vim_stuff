@@ -14,6 +14,9 @@ map <C-i> <Action>(Forward)
 map g; <Action>(JumpToLastChange)
 map g, <Action>(JumpToNextChange)
 
+" Lightline doesn't work, so re-enable showmode
+set showmode
+
 " Generate QueryDsl table definition from QTableName
 " let seems DON'T WORK in ideavim!!!!!!!!!!
 " Must be done with map (it isn't really a macro...)
