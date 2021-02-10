@@ -95,6 +95,7 @@ nnoremap Q :SendLine<CR>
 
 " dracula colorscheme
 let g:dracula_colorterm = 0
+let g:dracula_italic = 0       " for putty (doesn't support italic)
 set background=dark
 colorscheme dracula
 "colorscheme PaperColor
