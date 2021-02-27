@@ -156,6 +156,13 @@ Per usare un comando in modalità inserimento:
 
 <C-o><command>
 
+
+For every line containing "foo", substitute all "bar" with "zzz"
+
+g/foo/s/bar/zzz/g
+
+Works in ed(1) just like in its progeny.
+
 #####################################
 
 IdeaVIM
