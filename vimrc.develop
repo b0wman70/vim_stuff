@@ -72,7 +72,7 @@ Plug 'mhinz/vim-startify'
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
-Plug 'slarwise/vim-tmux-send'
+Plug 'b0wman70/vim-tmux-send'
 Plug 'https://tpope.io/vim/surround.git'
 Plug 'https://tpope.io/vim/commentary.git'
 Plug 'https://github.com/gregsexton/MatchTag.git'
