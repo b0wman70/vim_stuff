@@ -248,6 +248,11 @@ Then you can stage and commit
 
 ######################################
 
+########### CRTL-P ############
+<C-v>								To open file in a vertical split
+<C-x>								To open file in a horizontal split
+###############################
+
 Per usare la bash in modalità vi:
 set -o vi
 

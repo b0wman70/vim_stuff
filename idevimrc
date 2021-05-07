@@ -22,4 +22,3 @@ set showmode
 " Must be done with map (it isn't really a macro...)
 "let @q='^yiwA ^[pbx~^y$A = ^[pa;^[F r.^'
 nnoremap @q ^yiwA <ESC>pbx~^y$A = <ESC>pa;<ESC>F r.^
-
