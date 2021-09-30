@@ -232,6 +232,8 @@ nnoremap <silent> <C-f> :Files<CR>
 :G merge [options]  git merge [options]
 :Gcommit            git commit
 
+:h fugitive-staging-maps		Show commands for the status window
+
 Conflicts
 ---------
 
