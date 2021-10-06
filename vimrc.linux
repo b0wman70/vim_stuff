@@ -1,12 +1,14 @@
 " basics
 set nocompatible              " be iMproved
-set tabstop=2                 " set tab=2 spaces
-set expandtab                 " convert tab to spaces
 set number relativenumber
 set noswapfile
 set mouse=
 language en_US.UTF-8
 set wildmenu
+set nowrap
+" Copy to system clipboard as well
+set clipboard+=unnamed
+
 
 " syntax
 syntax on
@@ -16,9 +18,14 @@ set showmatch
 runtime macros/matchit.vim
 autocmd BufNewFile,BufRead *.jspf set filetype=jsp "consider jspf as jsp
 
+" most conservative indent settings to work with other people...
+set tabstop=2                 " set showed tab width=2 spaces
+set shiftwidth=2
+"set noexpandtab
+set copyindent
+set preserveindent
 set autoindent
 set smartindent
-set shiftwidth=2
 
 set incsearch
 
@@ -26,10 +33,10 @@ set incsearch
 vnoremap y y'>
 
 " add closing brakets
-inoremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>O
-inoremap (      ()<Left>
-inoremap (<CR>  (<CR>)<Esc>O
+"inoremap {      {}<Left>
+"inoremap {<CR>  {<CR>}<Esc>O
+"inoremap (      ()<Left>
+"inoremap (<CR>  (<CR>)<Esc>O
 
 " to autocomplete
 inoremap <C-Space> <C-x><C-o>
@@ -39,6 +46,9 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" like yy but without <CR> and trailing spaces
+nnoremap Y ^y$ 
 
 " open new split panes to right and bottom
 set splitbelow
@@ -58,21 +68,36 @@ Plug 'mhinz/vim-startify'
 "Plug 'https://github.com/ycm-core/YouCompleteMe.git'
 
 " fzf plugin (it must be installed fzf)
-"Plug 'junegunn/fzf.vim'
-"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
-Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
-Plug 'slarwise/vim-tmux-send'
+" Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
+Plug 'b0wman70/vim-tmux-send'
 Plug 'https://tpope.io/vim/surround.git'
 Plug 'https://tpope.io/vim/commentary.git'
 Plug 'https://github.com/gregsexton/MatchTag.git'
-
+Plug 'https://github.com/itchyny/lightline.vim'
+"Plug 'vim-airline/vim-airline'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'uiiaoo/java-syntax.vim' 
+Plug 'https://github.com/tpope/vim-fugitive.git'
 call plug#end()
 
+" For coloured lightline: "export TERM=xterm-256color"
+set noshowmode     " the bottom bar is now unecessary
+set laststatus=2   " always display statusbar
+
 " fzf
-"nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <C-p> :Files<CR>
+let g:fzf_preview_window = ['hidden', 'ctrl-/']   " preview window hidden, toggle with CTRL-/
 
 " vim-tmux-send
 nnoremap Q :SendLine<CR>
 
+" dracula colorscheme
+let g:dracula_colorterm = 0
+let g:dracula_italic = 0       " for putty (doesn't support italic)
 set background=dark
+colorscheme dracula
+"colorscheme PaperColor
+
