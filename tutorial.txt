@@ -229,6 +229,7 @@ nnoremap <silent> <C-f> :Files<CR>
 :G                  git status
                     s on 'Unstaged' row to stage file
                     u on 'Stage' row to unstage file
+                    (you can visual select multiple lines)
 :G merge [options]  git merge [options]
 :Gcommit            git commit
 
