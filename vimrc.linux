@@ -81,15 +81,29 @@ Plug 'https://github.com/itchyny/lightline.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'uiiaoo/java-syntax.vim' 
 Plug 'https://github.com/tpope/vim-fugitive.git'
+Plug  'simeji/winresizer'
 call plug#end()
 
 " For coloured lightline: "export TERM=xterm-256color"
 set noshowmode     " the bottom bar is now unecessary
 set laststatus=2   " always display statusbar
+" to show git branch name
+let g:lightline = {
+			\ 'active': {
+			\   'left': [ [ 'mode', 'paste' ],
+			\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+			\ },
+			\ 'component_function': {
+			\   'gitbranch': 'FugitiveHead'
+			\ },
+			\ }
+
 
 " fzf
 nnoremap <silent> <C-p> :Files<CR>
 let g:fzf_preview_window = ['hidden', 'ctrl-/']   " preview window hidden, toggle with CTRL-/
+" Most commands support CTRL-T / CTRL-X / CTRL-V key bindings to open in a new
+" tab, a new split, or in a new vertical split
 
 " vim-tmux-send
 nnoremap Q :SendLine<CR>
@@ -100,4 +114,3 @@ let g:dracula_italic = 0       " for putty (doesn't support italic)
 set background=dark
 colorscheme dracula
 "colorscheme PaperColor
-

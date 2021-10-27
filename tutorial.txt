@@ -175,7 +175,8 @@ File->Settings->Editor->VIM e far gestire CRTL-E a IDE (recent files)
 
 gd        goto definition (back <C-o> and forward <C-i>)
 
-CTRL-SHIFT-n  fuzzy find files
+CTRL-n        fuzzy find files
+CTRL-f        fuzzy find text inside files
 CRTL-e        show recent files
 ALT-[->|<-]   navigate tabs
 
@@ -249,6 +250,10 @@ dv                  (or :Givdiffsplit) open a 3 windows view with on the left th
 
 Then you can stage and commit
 
+######################################
+
+########### winresizer    ############
+CTRL-e							go resize mode (h,j,k,l)
 ######################################
 
 ########### CRTL-P ############
