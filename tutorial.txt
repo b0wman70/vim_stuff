@@ -171,7 +171,7 @@ IdeaVIM
 Usare .ideavimrc
 
 Per comodità:
-File->Settings->Editor->VIM Emulation e far CRTL-E a IDE (recent files)
+File->Settings->Editor->VIM e far gestire CRTL-E a IDE (recent files)
 
 gd        goto definition (back <C-o> and forward <C-i>)
 
