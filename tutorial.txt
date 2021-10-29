@@ -248,6 +248,8 @@ dv                  (or :Givdiffsplit) open a 3 windows view with on the left th
                     :diffget //2    to get the change from left
                     :diffget //3    to get the change from rigth
 
+										(then you have to update the view with :diffupdate)
+
 Then you can stage and commit
 
 ######################################
