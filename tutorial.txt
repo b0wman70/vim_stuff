@@ -164,6 +164,10 @@ For every line containing "foo", substitute all "bar" with "zzz"
 
 Works in ed(1) just like in its progeny.
 
+
+<CTRL-left>
+<CTRL_right>	back e forward di una word in insert mode
+
 #####################################
 
 IdeaVIM
@@ -263,6 +267,11 @@ CTRL-e							go resize mode (h,j,k,l)
 <C-v>								To open file in a vertical split
 <C-x>								To open file in a horizontal split
 ###############################
+
+
+
+
+
 
 Per usare la bash in modalità vi:
 set -o vi
