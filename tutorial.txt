@@ -166,7 +166,7 @@ Works in ed(1) just like in its progeny.
 
 
 <CTRL-left>
-<CTRL_right>	back e forward di una word in insert mode
+<CTRL-right>	back e forward di una word in insert mode
 
 #####################################
 
