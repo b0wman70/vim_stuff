@@ -161,8 +161,10 @@ For every line containing "foo", substitute all "bar" with "zzz"
 
 :g/foo/s/bar/zzz/g
 
-
 Works in ed(1) just like in its progeny.
+
+For every line containing foo run macro q:
+:g/foo/norm! @q
 
 
 <CTRL-left>
