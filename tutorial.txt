@@ -273,7 +273,7 @@ CTRL-e							go resize mode (h,j,k,l)
 ########## vim surround ##############
 
 cs"<div>						(change surround) "hello world!" -> <div>hello world!</div>
-cst'								(change surroundi tag) <div>hello world!</div> -> 'hello world!'
+cst'								(change surround tag) <div>hello world!</div> -> 'hello world!'
 ds"									(delete surround) "hello world!" -> hello world!
 ys<motion>"					(insert surround, a good mnemonic is "you surround") ex: ysiw" hello -> "hello" (As a special case, yss operates on the current line)
 S"									(same as previous but operates on visual selection)
