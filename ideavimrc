@@ -22,3 +22,8 @@ set showmode
 " Must be done with map (it isn't really a macro...)
 "let @q='^yiwA ^[pbx~^y$A = ^[pa;^[F r.^'
 nnoremap @q ^yiwA <ESC>pbx~^y$A = <ESC>pa;<ESC>F r.^
+
+" Generate Entity entry
+" Convert each NAME_LIKE_THIS to NameLikeThis in the current line:      :s#_*\(\u\)\(\u*\)#\1\L\2#g
+nnoremap @e ^ye^dwi@Column(name = "")<ESC>bt"poprivate String ;<ESC>Pbve:s#_*\(\u\)\(\u*\)#\1\L\2#g<CR>$b~o<ESC>j
+
