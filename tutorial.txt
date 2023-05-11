@@ -105,7 +105,7 @@ o         insert row after curret row
 O         insert row BEFORE curret row
 
 p         past after the cursor
-P         past before the cursor
+P         past before the cursor (N.B. useful to paste over a visual selection: it does NOT replace yank register!)
 
 #####################################
 

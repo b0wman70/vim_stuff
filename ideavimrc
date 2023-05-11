@@ -1,5 +1,8 @@
 source ~/.vimrc
 
+" it's already on .vimrc but without this line doesn't work...
+set clipboard+=unnamed
+
 " Emulate surround.vim
 set surround
 
