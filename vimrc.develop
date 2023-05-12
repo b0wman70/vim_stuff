@@ -30,7 +30,7 @@ set smartindent
 set incsearch
 
 " when yank a visual block put the cursor at the and of visual block
-vnoremap y y'>
+"vnoremap y y'>
 
 " add closing brakets
 "inoremap {      {}<Left>
@@ -110,4 +110,9 @@ let g:dracula_italic = 0       " for putty (doesn't support italic)
 set background=dark
 colorscheme dracula
 "colorscheme PaperColor
+"
+" Generate Entity entry
+" Convert each NAME_LIKE_THIS to NameLikeThis in the current line:      :s#_*\(\u\)\(\u*\)#\1\L\2#g
+nnoremap @e ^ye^dwi@Column(name = "")<ESC>bt"poprivate String ;<ESC>Pbve:s#_*\(\u\)\(\u*\)#\1\L\2#g<CR>$b~o<ESC>j
+
 
