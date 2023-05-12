@@ -41,7 +41,7 @@ set smartindent
 set incsearch
 
 " when yank a visual block put the cursor at the and of visual block
-vnoremap y y'>
+"vnoremap y y'>
 
 " add closing brakets
 "inoremap {      {}<Left>
