@@ -170,6 +170,8 @@ For every line containing foo run macro q:
 <CTRL-left>
 <CTRL-right>	back e forward di una word in insert mode
 
+<C-R>"				paste in command mode
+
 #####################################
 
 IdeaVIM
