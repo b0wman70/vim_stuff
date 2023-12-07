@@ -29,6 +29,9 @@ set smartindent
 
 set incsearch
 
+" to select better in visual block
+set virtualedit=block
+
 " when yank a visual block put the cursor at the and of visual block
 "vnoremap y y'>
 
