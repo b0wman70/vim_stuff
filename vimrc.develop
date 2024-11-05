@@ -42,6 +42,7 @@ set virtualedit=block
 "inoremap (<CR>  (<CR>)<Esc>O
 
 " to autocomplete
+set omnifunc=syntaxcomplete#Complete
 inoremap <C-Space> <C-x><C-o>
 
 " easy splitted windows navigation
@@ -84,7 +85,7 @@ Plug 'https://github.com/itchyny/lightline.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'uiiaoo/java-syntax.vim' 
 Plug 'https://github.com/tpope/vim-fugitive.git'
-Plug  'simeji/winresizer'
+Plug 'simeji/winresizer'
 call plug#end()
 
 " For coloured lightline: "export TERM=xterm-256color"
