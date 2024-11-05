@@ -78,9 +78,13 @@ a{x}        all {x}
 {x} can be: w (word), p (paragraph), t (tag), (, [, {, <, '. ", etc...
 
 Ex:
-diw delete inside word
-dip delete inside paragraph
+diw: delete inside word
+dip: delete inside paragraph
 
+N.B. it works also if the cursor is not inside {x}
+Ex:
+ci( on the following line changes the content of (...) also if the cursor is outside (...)
+logger.debug("Processing " + row + "...");
 
 
 
