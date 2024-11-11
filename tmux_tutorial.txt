@@ -12,3 +12,5 @@ tmux a -t bob					attach bob session
 C-b %									create vertical pane 
 C-b "									create horizontal pane
 C-b ALT-arrow					resize pane
+C-b z									toggle zoom actual pane
+
