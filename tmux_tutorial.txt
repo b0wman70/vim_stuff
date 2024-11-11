@@ -1,0 +1,14 @@
+TMUX
+
+session -> windows -> panes
+
+tmux									create session
+tmux new -s bob				create session named bob
+tmux ls								list session
+C-b d									detach session
+tmux a								attach last session
+tmux a -t bob					attach bob session
+
+C-b %									create vertical pane 
+C-b "									create horizontal pane
+C-b ALT-arrow					resize pane
