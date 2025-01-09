@@ -14,3 +14,7 @@ C-b "									create horizontal pane
 C-b ALT-arrow					resize pane
 C-b z									toggle zoom actual pane
 
+
+to scroll:
+C-b [									then you can use arrow keys
+
