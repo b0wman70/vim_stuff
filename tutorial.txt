@@ -183,6 +183,9 @@ IdeaVIM
 
 Usare .ideavimrc
 
+Creare shortcut per git blame:
+Settings -> Keymap -> Version Control System -> Git -> Annotate: assegnargli C-<
+
 Per comodità:
 File->Settings->Editor->VIM e far gestire CRTL-E a IDE (recent files)
 
