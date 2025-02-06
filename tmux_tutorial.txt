@@ -16,5 +16,5 @@ C-b z									toggle zoom actual pane
 
 
 to scroll:
-C-b [									then you can use arrow keys
+C-b [									then you can use arrow keys (q to exit)
 
